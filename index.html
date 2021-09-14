@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>bakekok</title>
+  </head>
+  <body>
+    <!-- Love -->
+    <div class="justify-content-center text-center" style="margin-top: 130px;"><i class="bi bi-heart-fill text-danger hati" style="font-size: 150px; opacity: 0%;"></i></div>
+    <!-- Love End -->
+
+
+    <!-- Form -->
+    <form class="container" style="margin-top: 50px; max-width: 500px;" onsubmit="LoveRate()" action="#">
+      <div class="mb-3">
+        <label class="form-label">Pilih atau ketik angka antara 1-100</label>
+        <input type="number" class="form-control angka" value="">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- Form End -->
+
+    <!-- Rate Text Start -->
+    <p class="rating container" style="max-width: 500px; margin-top: 20px;"><!--hih sedih bgt 0 😥😔--></p>
+    <!-- Rate Text End -->
+
+    <!-- Rate
+    <div>
+      <p class="0">hih sedih bgt 0 😥😔</p>
+      <p class="under10">hiks 😥</p>
+      <p class="under50">sedih bgt ga nyampe setengah</p>
+      <p class="50">oohh cuma setengah?</p>
+      <p class="under100">nanggung bgt, knpa ga 100?</p>
+      <p class="100">aaaaa makacii</p>
+    </div>-->
+
+    
+
+
+
+    <script>
+      
+      const angka = document.querySelector('.angka');
+      const hati = document.querySelector('.hati');
+      const rating = document.querySelector('.rating');
+
+      function LoveRate() {
+        hati.style.opacity = angka.value+'%';
+        rateText();
+      }
+
+      function rateText() {
+        if (angka.value == 0) {
+          rating.innerHTML = "hih sedih bgt 0 😥😔";
+        }
+        if (angka.value < 50) {
+          rating.innerHTML = "sedih bgt ga nyampe setengah 😔";
+        }
+        if (angka.value == 50) {
+          rating.innerHTML = "oohh cuma setengah?";
+        }
+        if (angka.value > 50) {
+          rating.innerHTML = "nanggung bgt, knpa ga 100? :D";
+        }
+        if (angka.value == 100) {
+          rating.innerHTML = "aaaaa makacii";
+        }
+        if (angka.value > 100) {
+          rating.innerHTML = "BAHH LEBIH DARI 100, aaaaaaa";
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
